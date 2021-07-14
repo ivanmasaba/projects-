@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <title>IVANZ APP</title>
+    <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='beauty.css') }}"
+    />
+
+        <!-- Bootstrap core CSS -->
+    <link
+            href="../static/assets/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+    />
+
+    <script>
+        {% endblock %}
+    </script>
+
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <a class="navbar-brand" href="{{ url_for('main.index') }}" > Pushups logger </a>
+      <button
+       class="navbar-toggler"
+       type="button"
+       data-toggle="collapse"
+       data-target="#navbarSupportedContent"
+       aria-controls="navbarSupportedContent"
+       aria-expanded="false"
+       aria-label="Toggle navigation"
+      >
+          <span class="navbar-toggler-icon" ></span>
+      </button>
+
+   <div
+   class="collapse navbar-collapse"id="navbarSupportedContent">
+       <ul class="navbar-nav mr-auto">
+           <li class="nav-item active">
+               <a href="{{ url_for('main.index') }}"
+               class="btn btn-outline-secondary"
+               role="button"> All workouts </a>
+           </li>
+
+           <li class="nav-item">
+               <a
+                       href="{{ url_for('main.profile') }}"
+                       class="btn btn-outline-secondary"
+                       role="button"
+                       style="margin-left: 4px"
+               > Account </a>
+           </li>
+       </ul>
+
+       <form
+               class="form-inline my-2 my-lg-0">
+           <a href="{{ url_for('auth.signup') }}" class="btn btn-outline-primary" role="button"> Signup </a>
+           <a
+                   href="{{ url_for('auth.login') }}"
+                   class="btn btn-outline-primary"
+                   role="button"
+                   style="margin-left: 4px"
+           > Login  </a>
+
+       </form>
+
+   </div>
+
+
+  </nav>
+
+
+  {% block content %} {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+
+GET http://localhost/api/customers HTTP/1.1
+
+###
+GET http://localhost/api/customers/1 HTTP/1.1
+
+###
+
+POST http://localhost/api/customers
+Content-Type: application/json 
+
+{
+    "fname":"hj",
+    "lname":"f",
+    "email":"jgab@gt.com",
+    "phone":"0706987574",
+    "address":"nebbi"
+}
+
+###
+
+PUT http://localhost/api/customers/6
+Content-Type: application/json
+
+{
+    "fname":"Bryan",
+    "lname":"george",
+    "email":"ivan@gmail.com",
+    "phone":"0704987574",
+    "address":"kibuli"
+}
+
+###
+
+DELETE http://localhost/api/customers/4
+
+

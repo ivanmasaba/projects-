@@ -1,0 +1,33 @@
+
+GET http://localhost/api/invoices HTTP/1.1
+
+###
+GET http://localhost/api/invoices/1 HTTP/1.1
+
+###
+
+POST http://localhost/api/invoices
+Content-Type: application/json 
+
+{
+    "date":"2021-04-25",
+    "customer":"Fred",
+    "product":"PC"
+}
+
+###
+
+PUT http://localhost/api/invoices/6
+Content-Type: application/json
+
+{
+    "date":"Bryan",
+    "customer":"george",
+    "product":"ivan@gmail.com"
+}
+
+###
+
+DELETE http://localhost/api/invoices/6
+
+

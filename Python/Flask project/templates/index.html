@@ -1,0 +1,21 @@
+{% extends 'root.html' %} {% block head %} {{ super() }}
+
+<link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='extended_beauty.css') }}"
+/>
+
+{% endblock %} {% block content %}
+
+<h1> Hello....</h1>
+
+<center>
+    <img
+            alt="Whats up there....">
+</center>
+
+<p> Welcome to my App<br/>
+    Continue...</p>
+{% print("This is how to use python with html in flask") %}
+
+{% endblock %}

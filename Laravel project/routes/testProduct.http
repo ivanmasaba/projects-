@@ -1,0 +1,35 @@
+
+GET http://localhost/api/products HTTP/1.1
+
+###
+GET http://localhost/api/products/6 HTTP/1.1
+
+###
+
+POST http://localhost/api/products
+Content-Type: application/json 
+
+{
+    "pname":"phone",
+    "price":"400000",
+    "description":"For making calls",
+    "service":0
+}
+
+###
+
+PUT http://localhost/api/products/9
+Content-Type: application/json
+
+{
+    "pname":"black_berry",
+    "price":"350000",
+    "description":"For internet",
+    "service":0
+}
+
+###
+
+DELETE http://localhost/api/products/6
+
+
